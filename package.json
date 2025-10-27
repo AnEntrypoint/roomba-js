@@ -1,0 +1,53 @@
+{
+  "name": "wipe-dev",
+  "version": "1.0.3",
+  "description": "High-performance recursive node_modules removal tool",
+  "main": "index.js",
+  "bin": {
+    "wipe-dev": "./bin/roomba.js"
+  },
+  "scripts": {
+    "test": "node bin/roomba.js --dry-run .",
+    "lint": "echo \"No linting configured\"",
+    "prepare": "echo \"No build steps required\"",
+    "prepack": "echo \"Preparing package for npm publish\"",
+    "version": "npm run test && echo \"Tests passed, version updated\"",
+    "postversion": "git push && git push --tags",
+    "publish-safe": "./scripts/publish.sh",
+    "publish-quick": "./scripts/quick-publish.sh"
+  },
+  "keywords": [
+    "node-modules",
+    "clean",
+    "remove",
+    "cli",
+    "recursive",
+    "worker",
+    "parallel",
+    "performance"
+  ],
+  "author": "lanmower <almagestfraternite@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "index.js"
+  ],
+  "dependencies": {
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnEntrypoint/roomba-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnEntrypoint/roomba-js/issues"
+  },
+  "homepage": "https://github.com/AnEntrypoint/roomba-js#readme"
+}
